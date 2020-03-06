@@ -1,10 +1,6 @@
 import java.util.Arrays;
 
 public class SortOfSort {
-    public static void  main(String[] args){
-        int[] a = {200, 90, 323, 0, 61, 4000};
-        sortArray(a);
-    }
 
     public static void sortArray(int[] arr){
         int switchCount = 0;
@@ -13,6 +9,11 @@ public class SortOfSort {
         int largest; // stores the current largest integer.
         int temp; // temporarily stores an element's value during swapping.
         int index = 0; // stores the index where the largest int was found.
+
+        /*if the array is <= 1, then just leave it alone*/
+        if(arr.length <= 1){
+            printArray(arr);
+        }
 
         while (left < right){
             largest = arr[left];
@@ -49,7 +50,6 @@ public class SortOfSort {
 
         }
         printArray(arr);
-
     }
 
     public static void printArray(int[] a){
